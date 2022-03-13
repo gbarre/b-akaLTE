@@ -19,7 +19,7 @@ export const MENU = [
     {
         name: 'Dashboard',
         path: ['/'],
-        icon: 'ion ion-speedometer'
+        icon: 'fas fa-tachometer-alt'
     },
     {
         name: 'Blank',
@@ -28,12 +28,12 @@ export const MENU = [
     },
     {
         name: 'Components',
-        icon: 'ion ion-ios-gear',
+        icon: 'fas fa-gears',
         children: [
             {
                 name: 'Accounts',
                 path: ['/accounts'],
-                icon: 'ion ion-ios-people'
+                icon: 'fas fa-users'
             }
         ]
     }
