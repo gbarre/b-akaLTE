@@ -1,28 +1,25 @@
 <li class="nav-item">
-    <a
-        (click)="handleMainMenuAction()"
-        class="nav-link"
-        [ngClass]="{active: isMainActive || isOneOfChildrenActive}"
-    >
-        <i  class="nav-icon {{ menuItem.icon }}"></i>&nbsp;&nbsp;
-        <p>
-            {{ menuItem.name }}
-            <i
-                *ngIf="isExpandable && menuItem.children.length > 0"
-                class="right fas fa-angle-left"
-            ></i>
-        </p>
-    </a>
-    <ul class="nav nav-treeview" *ngFor="let item of menuItem.children">
-        <li class="nav-item">
-            <a
-                [routerLink]="item.path"
-                [routerLinkActive]="'active'"
-                class="nav-link"
-            >
-                <i class="{{ item.icon }}"></i>&nbsp;&nbsp;
-                <p>{{ item.name }}</p>
-            </a>
-        </li>
-    </ul>
+  <a
+    (click)="handleMainMenuAction()"
+    class="nav-link"
+    [ngClass]="{ active: isMainActive || isOneOfChildrenActive }">
+    <i class="nav-icon {{ menuItem.icon }}"></i>&nbsp;&nbsp;
+    <p>
+      {{ menuItem.name }}
+      <i
+        *ngIf="isExpandable && menuItem.children.length > 0"
+        class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+  <ul class="nav nav-treeview" *ngFor="let item of menuItem.children">
+    <li class="nav-item">
+      <a
+        [routerLink]="item.path"
+        [routerLinkActive]="'active'"
+        class="nav-link">
+        <i class="{{ item.icon }}"></i>&nbsp;&nbsp;
+        <p>{{ item.name }}</p>
+      </a>
+    </li>
+  </ul>
 </li>

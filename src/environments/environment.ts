@@ -3,18 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-    production: false,
+  production: false,
 
-    keycloak: {
-        url: 'http://localhost:8080/auth',
-        realm: 'dev',
-        clientId: 'dev-node'
-    },
+  keycloak: {
+    url: 'http://localhost:8080/auth',
+    realm: 'dev',
+    clientId: 'dev-node',
+  },
 
-    api: {
-        url: '__API_URL__',
-        version: '__API_VERSION__'
-    }
+  api: {
+    url: '__API_URL__',
+    version: '__API_VERSION__',
+  },
 };
 
 /*
