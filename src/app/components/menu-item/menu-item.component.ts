@@ -55,7 +55,7 @@ export class MenuItemComponent implements OnInit {
           this.isMenuExtended = true;
         }
       });
-    } else if (this.menuItem.path[0] === url) {
+    } else if (this.menuItem.path !== null && this.menuItem.path[0] === url) {
       this.isMainActive = true;
     }
     if (!this.isMainActive && !this.isOneOfChildrenActive) {

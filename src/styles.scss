@@ -1,5 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-// @import '~bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: "Metropolis-Regular";
+    src: local("Metropolis-Regular"), url("assets/font/Metropolis-Regular.otf");
+}
+
+@font-face {
+    font-family: "Font-Awesome-6-Brands";
+    src: local("Font-Awesome-6-Brands"), url("assets/font/fa-brands-400.woff2");
+}
+
+@font-face {
+    font-family: "Font-Awesome-6-Pro";
+    src: local("Font-Awesome-6-Pro"), url("assets/font/fa-6-pro-solid.woff2");
+}
+
+.fa6b {
+    font-family: "Font-Awesome-6-Brands";
+}
+
+.fa6p {
+    font-family: "Font-Awesome-6-Pro";
+    font-style: normal;
+}
+
+* {
+    font-family: "Metropolis-Regular";
+}
 
 @import '~admin-lte/plugins/fontawesome-free/css/all.min.css';
 @import '~admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css';
@@ -9,6 +36,9 @@
 @import '~admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css';
 @import '~admin-lte/plugins/daterangepicker/daterangepicker.css';
 @import '~admin-lte/plugins/summernote/summernote-bs4.min.css';
+@import '~admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css';
+@import '~admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css';
+@import '~admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css';
 
 @import '~ngx-toastr/toastr';
 
@@ -135,4 +165,206 @@ body {
 
 .content {
     padding: 0 .5rem;
+}
+
+.ng-select .ng-select-container {
+    border:0;
+}
+
+ng-select.form-control {
+    padding: 0;
+}
+div.ng-select-container {
+    border:0;
+}
+
+.fa-hard-drive:before{content:"\f0a0"}
+.fa-floppy-disk:before{content:"\f0c7"}
+.fa-ticket-simple:before{content:"\f3ff"}
+.fa-microship:before{content:"\f2db"}
+.fa-circle-radiation:before{content:"\f7ba"}
+.fa-circle-info:before{content:"\f05a"}
+.fa-circle-plus:before{content:"\f055"}
+.fa-circle-xmark:before{content:"\f057"}
+.fa-circle-check:before{content:"\f058"}
+.fa-gears:before{content:"\f085"}
+.fa-bars-progress:before{content:"\f828"}
+.fa-triangle-exclamation:before{content:"\f071"}
+.fa-calendar-days:before{content:"\f073"}
+.fa-list-check:before,.fa-tasks:before{content: "\f0ae";}
+.fa-redo-alt:before,.fa-rotate-forward:before,.fa-rotate-right:before{content: "\f2f9";}
+
+.modal-large {
+    max-width: 800px;
+}
+
+.loader {
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f4f6f9;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+// Insert bootstrap 5 classes for col-xxl and offset-xxl
+@media (min-width: 1400px) {
+    .d-xxl-block {
+        display: block !important;
+    }
+
+    .col-xxl {
+        flex: 1 0 0%;
+    }
+
+    .row-cols-xxl-auto > * {
+        flex: 0 0 auto;
+        width: auto;
+    }
+
+    .row-cols-xxl-1 > * {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .row-cols-xxl-2 > * {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .row-cols-xxl-3 > * {
+        flex: 0 0 auto;
+        width: 33.3333333333%;
+    }
+
+    .row-cols-xxl-4 > * {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
+    .row-cols-xxl-5 > * {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+
+    .row-cols-xxl-6 > * {
+        flex: 0 0 auto;
+        width: 16.6666666667%;
+    }
+
+    .col-xxl-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+
+    .col-xxl-1 {
+        flex: 0 0 auto;
+        width: 8.33333333%;
+    }
+
+    .col-xxl-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%;
+    }
+
+    .col-xxl-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
+    .col-xxl-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    .col-xxl-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+
+    .col-xxl-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .col-xxl-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+
+    .col-xxl-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+
+    .col-xxl-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+
+    .col-xxl-10 {
+        flex: 0 0 auto;
+        width: 83.33333333%;
+    }
+
+    .col-xxl-11 {
+        flex: 0 0 auto;
+        width: 91.66666667%;
+    }
+
+    .col-xxl-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .offset-xxl-0 {
+        margin-left: 0;
+    }
+
+    .offset-xxl-1 {
+        margin-left: 8.33333333%;
+    }
+
+    .offset-xxl-2 {
+        margin-left: 16.66666667%;
+    }
+
+    .offset-xxl-3 {
+        margin-left: 25%;
+    }
+
+    .offset-xxl-4 {
+        margin-left: 33.33333333%;
+    }
+
+    .offset-xxl-5 {
+        margin-left: 41.66666667%;
+    }
+
+    .offset-xxl-6 {
+        margin-left: 50%;
+    }
+
+    .offset-xxl-7 {
+        margin-left: 58.33333333%;
+    }
+
+    .offset-xxl-8 {
+        margin-left: 66.66666667%;
+    }
+
+    .offset-xxl-9 {
+        margin-left: 75%;
+    }
+
+    .offset-xxl-10 {
+        margin-left: 83.33333333%;
+    }
+
+    .offset-xxl-11 {
+        margin-left: 91.66666667%;
+    }
 }

@@ -27,9 +27,9 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { DropdownMenuComponent } from './components/dropdown/dropdown-menu/dropdown-menu.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { environment } from 'environments/environment';
+import { AppAuthGuard } from './app.authguard';
 
 registerLocaleData(localeEn, 'en-EN');
-declare var jQuery: any;
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
@@ -82,6 +82,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
     KeycloakAngularModule,
   ],
   providers: [
+    AppAuthGuard,
     {
       provide: APP_INITIALIZER,
       useFactory: initializeKeycloak,

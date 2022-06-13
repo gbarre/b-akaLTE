@@ -1,23 +1,20 @@
 <app-dropdown class="user-menu">
   <ng-container dropdown-button>
-    <img
-      src="assets/img/default-profile.png"
-      class="user-image img-circle elevation-2"
-      alt="User Image" />
+    <i class="fas fa-xl fa-user elevation-2 user-image"></i>
   </ng-container>
   <ng-container dropdown-menu>
-    <li class="user-header bg-primary">
-      <img
-        src="assets/img/default-profile.png"
-        class="img-circle elevation-2"
-        alt="User Image" />
-
-      <p>
-        <span>{{ currentUser }}</span>
-        <small>
-          <span>Member since </span>
-          <span>so far</span>
-        </small>
+    <li class="user-header bg-primary position-relative">
+      <i class="fas fa-5x fa-user mt-3"></i>
+      <div class="ribbon-wrapper ribbon-xl">
+        <div class="ribbon bg-success text-lg">
+          {{ role }}
+        </div>
+      </div>
+      <p *ngIf="currentUser !== undefined">
+        <span>{{ currentUser['username'] }}</span>
+        <small
+          >{{ currentUser['firstName'] }} {{ currentUser['lastName'] }}</small
+        >
       </p>
     </li>
     <!-- Menu Body -->

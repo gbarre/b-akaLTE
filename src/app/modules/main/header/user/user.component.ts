@@ -8,13 +8,15 @@ import { DateTime } from 'luxon';
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent implements OnInit {
-  public currentUser;
+  public currentUser: object;
+  public role: string;
 
   constructor(private keycloakService: KeycloakService) {}
 
   ngOnInit(): void {
     this.keycloakService.loadUserProfile().then(user => {
-      this.currentUser = user.username;
+      this.currentUser = user;
+      this.role = user.username.slice(0, -1);
     });
   }
 
