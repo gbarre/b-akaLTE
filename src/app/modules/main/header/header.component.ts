@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class HeaderComponent {
   @Output() toggleMenuSidebar: EventEmitter<any> = new EventEmitter<any>();
-  public searchForm: FormGroup;
+  public searchForm: UntypedFormGroup;
   public currentUser: string;
 
   constructor() {}
