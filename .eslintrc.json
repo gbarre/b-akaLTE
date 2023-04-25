@@ -8,7 +8,10 @@
       "files": [
         "*.ts"
       ],
+
       "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
         "project": [
           "tsconfig.json",
           "e2e/tsconfig.json"
@@ -20,6 +23,7 @@
         "plugin:@angular-eslint/template/process-inline-templates",
         "plugin:prettier/recommended"
       ],
+      "plugins": ["deprecation"],
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
@@ -37,7 +41,8 @@
             "style": "kebab-case"
           }
         ],
-        "no-console": "error"
+        "no-console": "error",
+        "deprecation/deprecation": "warn"
       }
     },
     {

@@ -57,6 +57,8 @@
             "optimization": false,
             "namedChunks": true,
             "allowedCommonJsDependencies": [
+              "base64-js",
+              "fs-sha256",
               "keycloak-js"
             ]
           },
